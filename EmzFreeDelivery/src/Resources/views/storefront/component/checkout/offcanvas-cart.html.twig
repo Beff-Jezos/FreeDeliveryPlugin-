@@ -1,0 +1,65 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-cart.html.twig' %}
+
+{% set iconSizeOffCanvasCart = config('EmzFreeDeliver.config.iconSizeOffCanvas') %}
+{% set iconColorOffCanvasCart = config('EmzFreeDelivery.config.iconColorOffCanvas') %}
+{% set textColorOffCanvasCart = config('EmzFreeDelivery.config.textColorOffCanvasCart') %}
+{% set backgroundColorOffCanvasCart = config('EmzFreeDelivery.config.backgroundColorOffCanvasCart') %}
+{% set progressBarColorOffCanvasCart = config('EmzFreeDelivery.config.progressBarColorOffCanvasCart') %}
+
+
+{% block component_offcanvas_cart_flashbags %}
+	{{ parent() }}
+
+    {% if config('EmzFreeDelivery.config.dropdownDisplayStyleOffCanvas') == 'offCanvasOpt2'  %}
+
+    <div class="emz-container emz-offcanvas-cart">
+        {% sw_icon 'truck' style {
+            'namespace': 'EmzFreeDelivery',
+            'pack': 'default'
+        } %}
+        <div class="emz-progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="emz-free-delivery-text"> {{ "emz-free-delivery.offcanvas-cart.description"|trans ({ remainingValue: 25|currency }) }}</div>
+    </div>
+    {% endif %}
+
+    {# Text + Bar #}
+    {% if config('EmzFreeDelivery.config.dropdownDisplayStyleOffCanvas') == 'offCanvasOpt1'  %}
+
+    <div class="emz-container emz-offcanvas-cart">
+
+        <div class="emz-free-delivery-text"> {{ "emz-free-delivery.offcanvas-cart.description"|trans ({ remainingValue: 25|currency }) }}</div>
+        <div class="emz-progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# Icon + Bar #}
+    {% if config('EmzFreeDelivery.config.dropdownDisplayStyleOffCanvas') == 'offCanvasOpt3'  %}
+
+    <div class="emz-container emz-offcanvas-cart">
+        <div class="icon-bar-container">
+            {% sw_icon 'truck' style {
+                'namespace': 'EmzFreeDelivery',
+                'pack': 'default'
+            } %}
+
+            <div class="emz-progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>  
+    </div>
+    {% endif %}
+
+    {# Text #}
+    {% if config('EmzFreeDelivery.config.dropdownDisplayStyleOffCanvas') == 'offCanvasOpt4'  %}
+
+    <div class="emz-container emz-offcanvas-cart">
+
+        <div class="emz-free-delivery-text"> {{ "emz-free-delivery.offcanvas-cart.description"|trans ({ remainingValue: 25|currency }) }}</div>
+
+    </div>
+    {% endif %}
+{% endblock %}

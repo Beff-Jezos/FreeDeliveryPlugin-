@@ -1,0 +1,12 @@
+{
+    "emz-free-delivery": {
+        "offcanvas-cart": {
+            "info":"Kostenloser Versand",
+            "description": "Bestellen Sie für weitere **remainingValue**, um Ihre Bestellung versandkostenfrei zu erhalten."
+        },
+        "offcanvas-checkout": {
+            "info":"Kostenloser Versand",
+            "description": "Bestellen Sie für weitere **remainingValue**, um Ihre Bestellung versandkostenfrei zu erhalten."
+        }
+    }
+}

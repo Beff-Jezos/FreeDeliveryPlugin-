@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title lang="de-DE">Allgemeine Einstellungen</title>
+        <title> General settings</title>
+
+        <input-field type="bool">
+            <name>progressBarSwitch</name>
+            <label>Progress bar only visible for logged in customers</label>
+            <label lang="de-DE">Fortschrittsbalken nur für eingeloggte Kunden sichtbar</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+<!--
+		<component name="sw-snippet-field">
+			<name>freeDeliveryAmount</name>
+			<snippet>emz-delivery-free.config.freeDeliveryAmount</snippet>
+			<label>Free Shipping from?</label>
+			<label lang="de-DE">Kostenloser Versand ab?</label>
+		</component> 
+
+		<component name="sw-snippet-field">
+			<name>freeDeliveryAmount3</name>
+			<snippet>emz-delivery-free.config.freeDeliveryAmount2</snippet>
+			<label>Free Shipping from? 2.0</label>
+			<label lang="de-DE">Kostenloser Versand ab??</label>
+		</component>
+-->     
+    </card>
+
+
+    <!--
+        PDP CONFIG HERE ######################
+    -->
+    <card>
+        <title lang="de-DE"> Produktseite Einstellungen</title>
+        <title> Product Page settings</title>
+
+        <input-field type="colorpicker">
+            <name>backgroundColorPdp</name>
+            <label lang="de-DE">Hintergrundfarbe auf der Produktseite</label>
+            <label>Background color </label>
+            <css>bg-color-pdp</css>
+            <defaultValue>#ffffff</defaultValue>
+        </input-field>
+    
+        <input-field type="colorpicker">
+            <name>textColorPdp</name>
+            <label lang="de-DE">Textfarbe auf der Produktseite</label>
+            <label>Text color</label>
+            <css>text-color-pdp</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>progressBarColorPdp</name>
+            <label lang="de-DE">Balkenfarbe auf der Produktseite</label>
+            <label>Progress bar color</label>
+            <css>progress-bar-color-pdp</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStylePdp</name>
+            <label lang="de-DE">Anzeigemodus auf der Produktseite</label>
+            <label>Choose a display mode</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+            
+                <option>
+                    <id>pdpOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>pdpOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>pdpOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>pdpOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>pdpOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleFreeDeliveryPdp</name>
+            <label lang="de-DE">Anzeigemodus wenn versandkostenfrei Staus erreicht ist</label>
+            <label>Choose a display mode when free shipping limit is reached</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>pdpFreeDeliveryOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>pdpFreeDeliveryOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>pdpFreeDeliveryOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>pdpFreeDeliveryOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>pdpFreeDeliveryOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+
+        <!-- Only available when Progress bar + Icon or -//- + text is set -->
+        <component name="sw-media-field">
+            <name>pluginMediaPdp</name>
+            <label lang="de-DE">Benutzerdefiniertes Icon</label>
+            <label>Upload custom icon</label>
+
+        </component>
+
+        <input-field type="colorpicker">
+            <name>iconColorPdp</name>
+            <label lang="de-DE">Benutzerdefinierte Iconfarbe auf der Produktseite</label>
+            <label>Custom icon color</label>
+            <css>icon-color-pdp</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field>
+            <name>iconSizePdp</name>
+            <label lang="de-DE">Benutzerdefinierte Icongröße auf der Produktseite in Pixel</label>
+            <label>Custom icon size (pixel)</label>
+            <css>icon-size-pdp</css>
+            <defaultValue>22px</defaultValue>
+            <helpText>Remember to type in "px" at the end. </helpText>
+            
+        </input-field>
+
+    </card>
+    
+
+    <!--
+        Cart CONFIG HERE ######################
+    -->
+    <card>
+        <title lang="de-DE"> Warenkorb Einstellungen</title>
+        <title>Cart settings</title>
+
+        <input-field type="colorpicker">
+            <name>backgroundColorCart</name>
+            <label lang="de-DE">Hintergrundfarbe im Warenkorb</label>
+            <label>Background color </label>
+            <css>bg-color-cart</css>
+            <defaultValue>#ffffff</defaultValue>
+
+        </input-field>
+    
+        <input-field type="colorpicker">
+            <name>textColorCart</name>
+            <label lang="de-DE">Textfarbe im Warenkorb</label>
+            <label>Text color</label>
+            <css>text-color-cart</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>progressBarColorCart</name>
+            <label lang="de-DE">Balkenfarbe im Warenkorb</label>
+            <label>Progress bar color</label>
+            <css>progress-bar-color-cart</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleCart</name>
+            <label lang="de-DE">Anzeigemodus im Warenkorb</label>
+            <label>Choose a display mode for the cart view</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>cartOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>cartOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>cartOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>cartOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>cartOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleFreeDeliveryCart</name>
+            <label lang="de-DE">Anzeigemodus wenn versandkostenfrei Staus erreicht ist</label>
+            <label>Choose a display mode when free shipping limit is reached</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>cartFreeDeliveryOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>cartFreeDeliveryOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>cartFreeDeliveryOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>cartFreeDeliveryOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>cartFreeDeliveryOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+        <!-- Only available when Progress bar + Icon or -//- + text is set -->
+        <component name="sw-media-field">
+            <name>pluginMediaCart</name>
+            <label lang="de-DE">Benutzerdefiniertes Icon</label>
+            <label>Upload custom icon</label>
+
+        </component>
+
+        <input-field type="colorpicker">
+            <name>iconColorCart</name>
+            <label lang="de-DE">Benutzerdefinierte Iconfarbe auf der Produktseite</label>
+            <label>Custom icon color</label>
+            <css>icon-color-cart</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field>
+            <name>iconSizeCart</name>
+            <label lang="de-DE">Benutzerdefinierte Icongröße auf der Produktseite in Pixel</label>
+            <label>Custom icon size (pixel)</label>
+            <css>icon-size-cart</css>
+            <defaultValue>22px</defaultValue>
+            
+        </input-field>
+
+    </card>
+
+
+    <!--
+        OffCanvas Cart CONFIG HERE ######################
+    -->
+
+    <card>
+        <title lang="de-DE"> OffCanvas Warenkorb Einstellungen</title>
+        <title>OffCanvas Cart settings</title>
+
+        <input-field type="colorpicker">
+            <name>backgroundColorOffCanvasCart</name>
+            <label lang="de-DE">Hintergrundfarbe OffCanvas Warenkorb</label>
+            <label>Background color </label>
+            <css>bg-color-offcanvas</css>
+            <defaultValue>#ffffff</defaultValue>
+
+        </input-field>
+    
+        <input-field type="colorpicker">
+            <name>textColorOffCanvasCart</name>
+            <label lang="de-DE">Textfarbe OffCanvas Warenkorb</label>
+            <label>Text color</label>
+            <css>text-color-offcanvas</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>progressBarColorOffCanvasCart</name>
+            <label lang="de-DE">Balkenfarbe OffCanvas Warenkorb</label>
+            <label>Progress bar color</label>
+            <css>progress-bar-color-offcanvas</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleOffCanvas</name>
+            <label lang="de-DE">Anzeigemodus im OffCanvas Warenkorb</label>
+            <label>Choose a display mode</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>offCanvasOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>offCanvasOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>offCanvasOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>offCanvasOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>offCanvasOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+        
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleFreeDeliveryOffCanvas</name>
+            <label lang="de-DE">Anzeigemodus wenn versandkostenfrei Staus erreicht ist</label>
+            <label>Choose a display mode when free shipping limit is reached</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>offCanvasFreeDeliveryOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>offCanvasFreeDeliveryOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>offCanvasFreeDeliveryOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>offCanvasFreeDeliveryOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>offCanvasFreeDeliveryOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+        <!-- Only available when Progress bar + Icon or -//- + text is set -->
+        <component name="sw-media-field">
+            <name>pluginMediaOffCanvas</name>
+            <label lang="de-DE">Benutzerdefiniertes Icon</label>
+            <label>Upload custom icon</label>
+
+        </component>
+
+        <input-field type="colorpicker">
+            <name>iconColorOffCanvas</name>
+            <label lang="de-DE">Benutzerdefinierte Iconfarbe auf der Produktseite</label>
+            <label>Custom icon color</label>
+            <css>icon-color-offcanvas</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field>
+            <name>iconSizeOffCanvas</name>
+            <label lang="de-DE">Benutzerdefinierte Icongröße auf der Produktseite in Pixel</label>
+            <label>Custom icon size (pixel)</label>
+            <css>icon-size-offcanvas</css>
+            <defaultValue>22px</defaultValue>
+
+        </input-field>
+    </card>
+
+    <!--
+        Checkout CONFIG HERE ######################
+    -->
+
+    <card>
+        <title lang="de-DE"> Checkout Einstellungen</title>
+        <title>Checkout settings</title>
+
+        <input-field type="colorpicker">
+            <name>backgroundColorCheckout</name>
+            <label lang="de-DE">Hintergrundfarbe Checkout</label>
+            <label>Background color </label>
+            <css>bg-color-checkout</css>
+            <defaultValue>#ffffff</defaultValue>
+
+        </input-field>
+    
+        <input-field type="colorpicker">
+            <name>textColorCheckout</name>
+            <label lang="de-DE">Textfarbe Checkout</label>
+            <label>Text color</label>
+            <css>text-color-checkout</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>progressBarColorCheckout</name>
+            <label lang="de-DE">Balkenfarbe Checkout</label>
+            <label>Progress bar color</label>
+            <css>progress-bar-color-checkout</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleCheckout</name>
+            <label lang="de-DE">Anzeigemodus im Checkout</label>
+            <label>Choose a display mode</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>checkoutOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>checkoutOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>checkoutOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>checkoutOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>checkoutOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+        <input-field type="single-select">
+            <name>dropdownDisplayStyleFreeDeliveryCheckout</name>
+            <label lang="de-DE">Anzeigemodus wenn versandkostenfrei Staus erreicht ist</label>
+            <label>Choose a display mode when free shipping limit is reached</label>
+            <placeholder lang="de_DE"> Balken + Text</placeholder>
+            <placeholder>Progress bar + text</placeholder>
+            <options>
+                <option>
+                    <id>checkoutFreeDeliveryOpt1</id>
+                    <name lang="de-DE">Balken + Text</name>
+                    <name>Progress bar + text</name>
+                </option>
+
+                <option>
+                    <id>checkoutFreeDeliveryOpt2</id>
+                    <name lang="de-DE">Balken + Icon + Text</name>
+                    <name>Progress bar + Icon + text</name>
+                </option>
+
+                <option>
+                    <id>checkoutFreeDeliveryOpt3</id>
+                    <name lang="de-DE">Balken + Icon</name>
+                    <name>Progress bar + Icon</name>
+                </option>
+
+                <option>
+                    <id>checkoutFreeDeliveryOpt4</id>
+                    <name lang="de-DE">Nachricht</name>
+                    <name>Message</name>
+                </option>
+
+                <option>
+                    <id>checkoutFreeDeliveryOpt5</id>
+                    <name lang="de-DE">Nichts</name>
+                    <name>Nothing</name>
+                </option>
+
+            </options>    
+        </input-field>
+
+        <!-- Only available when Progress bar + Icon or -//- + text is set -->
+        <component name="sw-media-field">
+            <name>pluginMediaCheckout</name>
+            <label lang="de-DE">Benutzerdefiniertes Icon</label>
+            <label>Upload custom icon</label>
+
+        </component>
+
+        <input-field type="colorpicker">
+            <name>iconColorCheckout</name>
+            <label lang="de-DE">Benutzerdefinierte Iconfarbe auf der Produktseite</label>
+            <label>Custom icon color</label>
+            <css>icon-color-checkout</css>
+            <defaultValue>#72B53E</defaultValue>
+
+        </input-field>
+
+        <input-field type="int">
+            <name>iconSizeCheckout</name>
+            <label lang="de-DE">Benutzerdefinierte Icongröße auf der Produktseite in Pixel</label>
+            <label>Custom icon size (pixel)</label>
+            <css>icon-size-checkout</css>
+            <defaultValue>22</defaultValue>
+
+        </input-field>
+
+    </card>
+</config>

@@ -1,0 +1,62 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+
+
+{% set iconSizeCart = config('EmzFreeDeliver.config.iconSizeCart') %}
+{% set iconColorCart = config('EmzFreeDelivery.config.iconColorCart') %}
+{% set textColorCart = config('EmzFreeDelivery.config.textColorCart') %}
+{% set backgroundColorCart = config('EmzFreeDelivery.config.backgroundColorCart') %}
+{% set progressBarColorCart = config('EmzFreeDelivery.config.progressBarColorCart') %}
+
+{% block page_checkout_cart_header %}
+	{{ parent() }}
+
+    {# Icon + Text + Bar#}
+	{% if config('EmzFreeDelivery.config.dropdownDisplayStyleCart') == 'cartOpt2'  %}
+    <div class="emz-container emz-cart">
+        {% sw_icon 'truck' style {
+            'namespace': 'EmzFreeDelivery',
+            'pack': 'default'
+        } %}
+        <div class="emz-progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="emz-free-delivery-text"> {{ "emz-free-delivery.offcanvas-cart.description"|trans ({ remainingValue: 25|currency }) }}</div>
+    </div>
+	{% endif %}
+
+    {# Text + Bar #}
+	{% if config('EmzFreeDelivery.config.dropdownDisplayStyleCart') == 'cartOpt1'  %}
+    <div class="emz-container emz-cart">
+
+        <div class="emz-free-delivery-text"> {{ "emz-free-delivery.offcanvas-cart.description"|trans ({ remainingValue: 25|currency }) }}</div>
+        <div class="emz-progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+	{% endif %}
+
+    {# Icon + Bar #}
+	{% if config('EmzFreeDelivery.config.dropdownDisplayStyleCart') == 'cartOpt3'  %}
+    <div class="emz-container emz-cart">
+        <div class="icon-bar-container">
+            {% sw_icon 'truck' style {
+                'namespace': 'EmzFreeDelivery',
+                'pack': 'default'
+            } %}
+
+            <div class="emz-progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>  
+    </div>
+	{% endif %}
+
+	{# Text #}
+	{% if config('EmzFreeDelivery.config.dropdownDisplayStyleCart') == 'cartOpt4'  %}
+    <div class="emz-container emz-cart">
+
+        <div class="emz-free-delivery-text"> {{ "emz-free-delivery.offcanvas-cart.description"|trans ({ remainingValue: 25|currency }) }}</div>
+
+    </div>
+	{% endif %}
+{% endblock %}

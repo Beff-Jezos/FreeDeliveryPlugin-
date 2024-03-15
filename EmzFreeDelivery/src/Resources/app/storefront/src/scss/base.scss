@@ -1,0 +1,165 @@
+
+$bg-color-pdp: #ffffff !default;
+$progress-bar-color-pdp: #72B53E !default;
+$text-color-pdp: #72B53E !default;
+$icon-size-pdp: 22px !default;
+$icon-color-pdp: #72B53E !default;
+
+$bg-color-offcanvas: #ffffff !default;
+$progress-bar-color-offcanvas: #72B53E !default;
+$text-color-offcanvas: #72B53E !default;
+$icon-size-offcanvas: 22px !default;
+$icon-color-offcanvas: #72B53E !default;
+
+$bg-color-cart: #ffffff !default;
+$progress-bar-color-cart: #72B53E !default;
+$text-color-cart: #72B53E !default;
+$icon-size-cart: 22px !default;
+$icon-color-cart: #72B53E !default;
+
+$bg-color-checkout: #ffffff !default;
+$progress-bar-color-checkout: #72B53E !default;
+$text-color-checkout: #72B53E !default;
+$icon-size-checkout: 22px !default;
+$icon-color-checkout: #72B53E !default;
+
+// Base Settings
+
+.emz-container{
+    border-style: solid;
+    border-radius: 4px;
+    border-color: grey;
+    text-align: center;
+    padding: 10px 4px 10px 4px ;
+    position: relative;
+    background-color: $bg-color-pdp;
+}
+
+.emz-progress-bar{
+    height: 10px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $bg-color-pdp;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: $progress-bar-color-pdp;
+    position: relative;
+}
+.emz-progress-bar .progress{
+    width: 50%; // Hier muss dann die Versandkostenfrei Berechnung * 100 hin: $free-delivery-amount
+    height: 100%;
+    border-radius: 4px;
+    background-color: $progress-bar-color-pdp;
+    position: absolute;
+}
+
+.emz-free-delivery-text{
+    color: $text-color-pdp;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.icon-truck{
+    height: $icon-size-pdp !important;
+    width: $icon-size-pdp !important;
+    color: $icon-color-pdp;
+
+}
+
+.icon-bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon-truck{
+        // position: absolute;
+        // left: 32px;
+        // top: 2px;
+        margin-right: 20px;
+    }
+    .emz-progress-bar{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+// Offcanvas-cart settings
+
+.emz-container.emz-offcanvas-cart{
+    background-color: $bg-color-offcanvas;
+}
+.emz-offcanvas-cart{
+
+    .emz-free-delivery-text{
+        color: $text-color-offcanvas;
+    }
+    .emz-progress-bar{
+        background-color: $bg-color-offcanvas;
+        border-color: $progress-bar-color-offcanvas;
+
+        .progress{
+            background-color: $progress-bar-color-offcanvas;
+        }
+    }
+
+    .icon-truck{
+        height: $icon-size-offcanvas !important;
+        width: $icon-size-offcanvas !important;
+        color: $icon-color-offcanvas;
+    }
+}
+
+//Cart Settings
+
+.emz-container.emz-cart{
+    background-color: $bg-color-cart;
+}
+.emz-cart{
+
+    .emz-free-delivery-text{
+        color: $text-color-cart;
+    }
+    .emz-progress-bar{
+        background-color: $bg-color-cart;
+        border-color: $progress-bar-color-cart;
+
+        .progress{
+            background-color: $progress-bar-color-cart;
+        }
+    }
+
+    .icon-truck{
+        height: $icon-size-cart !important;
+        width: $icon-size-cart !important;
+        color: $icon-color-cart;
+    }
+}
+
+//Checkout Settings
+
+.emz-container.emz-checkout{
+    background-color: $bg-color-checkout;
+}
+.emz-checkout{
+
+    .emz-free-delivery-text{
+        color: $text-color-checkout;
+    }
+    .emz-progress-bar{
+        background-color: $bg-color-checkout;
+        border-color: $progress-bar-color-checkout;
+
+        .progress{
+            background-color: $progress-bar-color-checkout;
+        }
+    }
+
+    .icon-truck{
+        height: $icon-size-checkout !important;
+        width: $icon-size-checkout !important;
+        color: $icon-color-checkout;
+    }
+}
